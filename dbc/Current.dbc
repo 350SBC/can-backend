@@ -1,0 +1,77 @@
+
+VERSION ""
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    EV_
+    SGTYPE_
+    SIG_VALTYPE_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    BS_
+    BU_
+
+BS_:
+
+BU_: ECU1
+
+BO_ 2650805490 ENGINE_DATA: 8 ECU1
+    SG_ Engine_RPM : 39|32@0+ (0.00390625,0) [0|8000] "rpm" Vector__XXX
+
+BO_ 2650821874 FUELRate: 8 ECU1
+    SG_ Injector_Pulsewidth : 7|31@0+ (0.00390625,0) [0|100] "ms" Vector__XXX
+    SG_ Fuel_Flow : 39|32@0+ (0.00390625,0) [0|1000] "Pounds/hour" Vector__XX
+    
+BO_ 2650838258 CL_DUTY: 8 ECU1
+    SG_ Closed_Loop_Status : 7|31@0+ (0.00390625,0) [0|1] "" Vector__XXX
+    SG_ Duty_Cycle : 39|32@0+ (0.00390625,0) [0|100] "" Vector__XXX
+
+BO_ 2650854642 AFR_CCOMP: 8 ECU1
+    SG_ AFR_Left : 7|31@0+ (0.00390625,0) [0|1] "AFR" Vector__XXX
+    SG_ Close_Loop_Comp : 39|32@0+ (0.00390625,0) [0|100] "%" Vector__XXX
+
+BO_ 2650969330 Pedal_FPressure: 8 ECU1
+    SG_ Pedal : 7|31@0+ (0.00390625,0) [0|100] "%" Vector__XXX
+    SG_ Fuel_Pressure : 39|32@0+ (0.00390625,0) [0|1000] "PSI" Vector__XXX
+
+BO_ 2651084018 Gear_n20: 8 ECU1
+    SG_ Gear : 7|31@0+ (0.00390625,0) [0|5] "Gear" Vector__XXX
+    SG_ n20_not_today : 39|32@0+ (0.00390625,0) [0|1000] "n2o" Vector__XXX
+
+BO_  2650871026 AFR: 8 ECU1
+    SG_ Target_AFR : 7|31@0+ (0.00390625,0) [0|5] "AFR" Vector__XXX
+    SG_ AFR_Right : 39|32@0+ (0.00390625,0) [0|1000] "lamda" Vector__XXX
+
+BO_ 2650887410 Timing_avAFR: 8 ECU1
+    SG_ Timing : 7|31@0+ (0.00390625,0) [0|100] "Degrees" Vector__XXX
+    SG_ Average_AFR : 39|32@0+ (0.00390625,0) [0|1000] "Lamda" Vector__XXX
+
+BO_ 2650903794 MAP_knock: 8 ECU1
+    SG_ MAP : 7|31@0+ (0.00390625,0) [0|400] "mpa" Vector__XXX
+    SG_ knock : 39|32@0+ (0.00390625,0) [0|1] "n2o" Vector__XXX
+
+BO_ 2650920178 MAT_TPS: 8 ECU1
+    SG_ MAT : 7|31@0+ (0.00390625,0) [0|400] "degrees" Vector__XXX
+    SG_ TPS : 39|32@0+ (0.00390625,0) [0|1] "%" Vector__XXX
+
+BO_ 2650936562 Baro_CTS: 8 ECU1
+    SG_ Baro : 7|31@0+ (0.00390625,0) [0|400] "mpa" Vector__XXX
+    SG_ CTS : 39|32@0+ (0.00390625,0) [0|1] "Degrees" Vector__XXX
+
+BO_ 2650936562 OIL_Battery: 8 ECU1
+    SG_ Oil : 7|31@0+ (0.00390625,0) [0|400] "PSI" Vector__XXX
+    SG_ voltage : 39|32@0+ (0.00390625,0) [00.0|99.9] "voltage" Vector__XXX
+
+BO_ 2651100402 lineP_speed: 8 ECU1
+    SG_ lineP : 7|31@0+ (0.00390625,0) [0|400] "PSI" Vector__XXX
+    SG_ speed : 39|32@0+ (0.00390625,0) [0|150] "MPH" Vector__XXX
+
+
+
+
+

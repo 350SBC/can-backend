@@ -1,0 +1,35 @@
+VERSION ""
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    EV_
+    SGTYPE_
+    SIG_VALTYPE_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    BS_
+    BU_
+
+BS_:
+
+BU_: ECU1 ECU2
+
+BO_ 256 ENGINE_DATA: 8 ECU1
+    SG_ Engine_RPM : 0|16@1+ (0.125,0) [0|8000] "rpm" Vector__XXX
+    SG_ Engine_Coolant_Temp : 16|8@1- (1,-40) [-40|215] "C" Vector__XXX
+    SG_ Oil_Pressure : 24|8@1+ (0.5,0) [0|150] "psi" Vector__XXX
+
+BO_ 512 VEHICLE_SPEED: 8 ECU2
+    SG_ Vehicle_Speed : 0|16@1+ (0.01,0) [0|250] "km/h" Vector__XXX
+    SG_ Brake_Pedal_Pressed : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+    SG_ Gear_Position : 17|4@1+ (1,0) [0|15] "" Vector__XXX
+    VAL_ 512 Gear_Position 0 "Neutral" 1 "1st" 2 "2nd" 3 "3rd" 4 "4th" 5 "5th" 6 "6th" 15 "Reverse" ;
+
+BO_ 768 FUEL_DATA: 4 ECU1
+    SG_ Fuel_Level : 0|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+    SG_ Fuel_Pressure : 8|16@1+ (0.1,0) [0|1000] "kPa" Vector__XXX
